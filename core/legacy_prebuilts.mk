@@ -110,6 +110,7 @@ GRANDFATHERED_ALL_PREBUILT := \
 	RFFstd_501.bmd \
 	savebpver \
 	sbin \
+	seapp_contexts \
 	sholes-keypad.kl \
 	suplcerts.bks \
 	svc \
