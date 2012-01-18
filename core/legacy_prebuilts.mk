@@ -50,7 +50,6 @@ GRANDFATHERED_ALL_PREBUILT := \
 	egl.cfg \
 	enroll.ok \
 	en-US-ttp.data \
-	file_contexts \
 	firmware_error.565 \
 	firmware_install.565 \
 	ftmipcd \
@@ -99,7 +98,6 @@ GRANDFATHERED_ALL_PREBUILT := \
 	network.conf \
 	phone_type_choice.g2g \
 	pm \
-	policy.24 \
 	pppd-ril \
 	pppd-ril.options \
 	proc \
