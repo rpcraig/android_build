@@ -97,10 +97,7 @@ PRODUCT_PACKAGES := \
     libwilhelm \
     libz \
     screencap \
-    sensorservice \
-    sepolicy \
-    file_contexts \
-    seapp_contexts
+    sensorservice
 
 # host-only dependencies
 ifeq ($(WITH_HOST_DALVIK),true)
