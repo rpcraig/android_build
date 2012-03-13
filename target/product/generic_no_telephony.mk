@@ -37,6 +37,7 @@ PRODUCT_PACKAGES := \
     Provision \
     Phone \
     QuickSearchBox \
+    SEAndroidManager \
     Settings \
     Sync \
     SystemUI \
