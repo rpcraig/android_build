@@ -37,6 +37,7 @@ PRODUCT_PACKAGES := \
     Music \
     Provision \
     QuickSearchBox \
+    SEAndroidManager \
     Settings \
     Sync \
     Updater \
