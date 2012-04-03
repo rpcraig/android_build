@@ -392,12 +392,12 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.ShowProgress(0.5, 0)
 
   if OPTIONS.wipe_user_data:
-    script.FormatPartition("/data", OPTIONS.selinux_fc)
+    script.FormatPartition("/data")
 
   if OPTIONS.selinux_fc is not None:
     WritePolicyConfig(OPTIONS.selinux_fc, output_zip)
 
-  script.FormatPartition("/system", OPTIONS.selinux_fc)
+  script.FormatPartition("/system")
   script.Mount("/system")
   script.UnpackPackageDir("recovery", "/system")
   script.UnpackPackageDir("system", "/system")
@@ -607,7 +607,7 @@ def WriteIncrementalOTAPackage(target_zip, source_zip, output_zip):
 
   if OPTIONS.wipe_user_data:
     script.Print("Erasing user data...")
-    script.FormatPartition("/data", OPTIONS.selinux_fc)
+    script.FormatPartition("/data")
 
   script.Print("Removing unneeded files...")
   script.DeleteFiles(["/"+i[0] for i in verbatim_targets] +
