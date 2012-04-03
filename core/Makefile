@@ -1167,10 +1167,10 @@ $(INTERNAL_OTA_PACKAGE_TARGET): KEY_CERT_PAIR := $(DEFAULT_KEY_CERT_PAIR)
 $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS) $(SELINUX_DEPENDS)
 	@echo "Package OTA: $@"
 	$(hide) ./build/tools/releasetools/ota_from_target_files -v \
-	  $(if $(filter true, $(strip $(HAVE_SELINUX))),-S $(TARGET_ROOT_OUT)/file_contexts) \
-           -p $(HOST_OUT) \
-            -k $(KEY_CERT_PAIR) \
-            $(BUILT_TARGET_FILES_PACKAGE) $@
+	   $(if $(filter true, $(strip $(HAVE_SELINUX))),-S $(TARGET_ROOT_OUT)/file_contexts) \
+	   -p $(HOST_OUT) \
+	   -k $(KEY_CERT_PAIR) \
+	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
 .PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
