@@ -1461,6 +1461,7 @@ $(INTERNAL_SDK_TARGET): $(deps)
 	done; \
 	if [ $$FAIL ]; then exit 1; fi
 	$(hide) ( \
+		ATREE_STRIP="strip -x" \
 		$(HOST_OUT_EXECUTABLES)/atree \
 		$(addprefix -f ,$(PRIVATE_INPUT_FILES)) \
 			-m $(PRIVATE_DEP_FILE) \
